@@ -103,9 +103,9 @@ export default function BlogContent() {
                 <aside className="col-md-4 mt-5">
                     <div className="sticky-top">
                         <h3 className="text-center">Membros Squad 40</h3>
-                        <AboutGroup nameTitle="Carlos" imgSrc="https://pps.whatsapp.net/v/t61.24694-24/240411426_872751977010721_785711116086914845_n.jpg?ccb=11-4&oh=01_AVxsI9E433If9i0rBmD1HX4KjqzjomUKGb9kJkHC5cOOlg&oe=623FACD5" personText="Lorem ipsum dolor sit amet consectetur adipisicing elit." />
-                        <AboutGroup nameTitle="Rafael" imgSrc="https://pps.whatsapp.net/v/t61.24694-24/172649647_950340159018791_2101155469081150864_n.jpg?ccb=11-4&oh=e457f5023154b3f83f5ae3b675d4ab73&oe=62411E91" personText="Lorem ipsum dolor sit amet consectetur adipisicing elit." />
-                        <AboutGroup nameTitle="André" imgSrc="https://pps.whatsapp.net/v/t61.24694-24/257080993_5261417057243875_7306675103206257967_n.jpg?ccb=11-4&oh=f038747a41923fec00a2dc5228e9a30d&oe=623F3473" personText="Lorem ipsum dolor sit amet consectetur adipisicing elit." />
+                        <AboutGroup nameTitle="Carlos" imgSrc="carlos.jpg" personText="" />
+                        <AboutGroup nameTitle="Rafael" imgSrc="./rafael.jpg" personText="" />
+                        <AboutGroup nameTitle="André" imgSrc="andre.jpg" personText="" />
                     </div>
                 </aside>
             </div>
