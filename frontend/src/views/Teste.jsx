@@ -1,16 +1,23 @@
-import React from 'react';
+import React, { useState, setState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export default function Teste() {
+    const navigate = useNavigate();
+    const [resposta, setResposta] = useState('Resultado');
     const getTestResult = (e) => {
-       
-
-        let forms = document.querySelector('#formTest');
+        const inputsChecked = document.querySelectorAll('input:checked');
         e.preventDefault();
-        forms.forEach(child => console.log(child))
-       
+        let sempre = 0
+        inputsChecked.forEach(i => i.value == 0 ? sempre++ : '')
+        if (inputsChecked.length < 14) {
+            window.alert('Por favor, selecione uma resposta em todos os campos')
+        }else {
+            sempre >= 7 ? setResposta("Nós da TEAInfo recomendamos que você procure um profissional especializado") : setResposta("Não precisa se preocupar. Porém fique a vontade caso queira a opinião de um especialista");
+        }
+
     }
     return (
-        <main className="container">
+        <main className="container mt-5 mb-5">
             <form action="" id="formTest">
 
                 <div className="form-control">
@@ -172,9 +179,14 @@ export default function Teste() {
                         <input type="radio" name="question14" value="2" />Talvez
                     </div>
                 </div>
-
-                <button type="submit" className="btn btn-primary" onClick={getTestResult}>Enviar Questionário</button>
-
+                <div className="row">
+                    <div className="col text-center">
+                        <button type="submit" className="btn btn-primary mt-5 btn-lg" onClick={getTestResult}>Mostrar Resultado</button>
+                    </div>
+                    <div className="resultado col-md mt-5 text-center">
+                        <h3 className="display-6">{resposta}</h3>
+                    </div>
+                </div>
             </form>
         </main>
     )
